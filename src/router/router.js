@@ -45,6 +45,7 @@ const service = r => require.ensure([], () => r(require('../page/service/service
 const questionDetail = r => require.ensure([], () => r(require('../page/service/children/questionDetail')), 'questionDetail')
 const find = r => require.ensure([], () => r(require('../page/find/find')), 'find')
 const download = r => require.ensure([], () => r(require('../page/download/download')), 'download')
+const cssDemo = r => require.ensure([], () => r(require('../page/css/cssDemo')), 'cssDemo')
 
 
 
@@ -248,6 +249,11 @@ export default [{
                 path: 'detail', //积分说明
                 component: pointsDetail,
             }, ]
+        },
+        //CSS demo练习
+        {
+            path: '/cssDemo',
+            component: cssDemo
         },
     ]
 }]
